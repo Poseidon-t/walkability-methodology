@@ -17,7 +17,7 @@ The live tool that implements this methodology is at [safestreets.streetsandcomm
 
 If you use this methodology or the datasets in research, journalism, or downstream tooling, please cite:
 
-> Streets & Commons (2026). *SafeStreets Walkability Methodology, v1.0*. https://github.com/streetsandcommons/walkability-methodology
+> Streets & Commons (2026). *SafeStreets Walkability Methodology, v1.0*. https://github.com/Poseidon-t/walkability-methodology
 
 A machine-readable [`CITATION.cff`](./CITATION.cff) is included so GitHub renders a "Cite this repository" button. A DOI will be minted via Zenodo on the first tagged release.
 

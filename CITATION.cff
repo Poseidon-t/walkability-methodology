@@ -5,8 +5,8 @@ type: software
 version: "1.0.0"
 date-released: "2026-06-02"
 license: CC-BY-4.0
-url: "https://github.com/streetsandcommons/walkability-methodology"
-repository-code: "https://github.com/streetsandcommons/walkability-methodology"
+url: "https://github.com/Poseidon-t/walkability-methodology"
+repository-code: "https://github.com/Poseidon-t/walkability-methodology"
 authors:
   - name: "Streets & Commons"
     website: "https://streetsandcommons.com"

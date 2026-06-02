@@ -44,7 +44,7 @@ Missing corridor rows are blank (some smaller cities have fewer than 5 named roa
 
 ## Suggested citation
 
-> Streets & Commons (2026). *City Pedestrian Fatalities 2022 to 2024 (US, 50 cities)*. In SafeStreets Walkability Methodology, v1.0. https://github.com/streetsandcommons/walkability-methodology/blob/main/data/city-pedestrian-fatalities-2022-2024.csv
+> Streets & Commons (2026). *City Pedestrian Fatalities 2022 to 2024 (US, 50 cities)*. In SafeStreets Walkability Methodology, v1.0. https://github.com/Poseidon-t/walkability-methodology/blob/main/data/city-pedestrian-fatalities-2022-2024.csv
 
 When citing in journalism, please also link the underlying NHTSA FARS source so readers can verify.
 
