@@ -6,6 +6,10 @@ The version of the live SafeStreets tool always matches the latest entry here.
 
 ---
 
+## v1.0.1, 2026-06-02
+
+Re-released to trigger Zenodo DOI archival. Content identical to v1.0.0.
+
 ## v1.0.0, 2026-06-02
 
 First public, citable release of the methodology spec.
