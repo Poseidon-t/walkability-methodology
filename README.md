@@ -1,5 +1,8 @@
 # Walkability Methodology
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20506270.svg)](https://doi.org/10.5281/zenodo.20506270)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](./LICENSE)
+
 Open, citable methodology and supporting datasets behind the [SafeStreets](https://safestreets.streetsandcommons.com) walkability score, by [Streets & Commons](https://streetsandcommons.com).
 
 This repository is the canonical reference for how a SafeStreets walkability score is constructed, what data sources back it, and what its known limitations are. It exists so that researchers, journalists, policy makers, and software built on top of SafeStreets can cite a specific, versioned methodology rather than a moving web page.
@@ -17,9 +20,9 @@ The live tool that implements this methodology is at [safestreets.streetsandcomm
 
 If you use this methodology or the datasets in research, journalism, or downstream tooling, please cite:
 
-> Streets & Commons (2026). *SafeStreets Walkability Methodology, v1.0*. https://github.com/Poseidon-t/walkability-methodology
+> Streets & Commons (2026). *SafeStreets Walkability Methodology* (v1.0). Zenodo. https://doi.org/10.5281/zenodo.20506270
 
-A machine-readable [`CITATION.cff`](./CITATION.cff) is included so GitHub renders a "Cite this repository" button. A DOI will be minted via Zenodo on the first tagged release.
+A machine-readable [`CITATION.cff`](./CITATION.cff) is included so GitHub renders a "Cite this repository" button preloaded with the DOI above.
 
 ## Repository contents
 

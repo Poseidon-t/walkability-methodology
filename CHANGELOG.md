@@ -6,6 +6,12 @@ The version of the live SafeStreets tool always matches the latest entry here.
 
 ---
 
+## v1.0.2, 2026-06-02
+
+Wired the Zenodo DOI back into the repository: README badge, citation block, CITATION.cff `identifiers:` entry, and data card citation. DOI is concept-level and resolves to the latest version.
+
+DOI: [10.5281/zenodo.20506270](https://doi.org/10.5281/zenodo.20506270)
+
 ## v1.0.1, 2026-06-02
 
 Re-released to trigger Zenodo DOI archival. Content identical to v1.0.0.
