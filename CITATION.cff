@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+title: "SafeStreets Walkability Methodology"
+message: "If you use this methodology or the bundled datasets, please cite this repository."
+type: software
+version: "1.0.0"
+date-released: "2026-06-02"
+license: CC-BY-4.0
+url: "https://github.com/streetsandcommons/walkability-methodology"
+repository-code: "https://github.com/streetsandcommons/walkability-methodology"
+authors:
+  - name: "Streets & Commons"
+    website: "https://streetsandcommons.com"
+abstract: >-
+  Open methodology and supporting datasets behind the SafeStreets
+  walkability score, a 4-component framework (Daily Reach, Street Safety,
+  Transit Reach, Walking Comfort) rooted in the 15-minute city model.
+  Combines OpenStreetMap, Sentinel-2 satellite imagery, EPA, US Census
+  ACS, CDC PLACES, FEMA, NASADEM, Transitland GTFS, and Open-Meteo CAMS.
+  Provides composite walkability scores for any address worldwide.
+keywords:
+  - walkability
+  - pedestrian safety
+  - 15-minute city
+  - urban planning
+  - street design
+  - transit access
+  - open data
+  - OpenStreetMap
+  - Sentinel-2
+  - methodology
+identifiers: []

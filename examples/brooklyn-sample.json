@@ -1,0 +1,92 @@
+{
+  "_comment": "Illustrative sample response from the SafeStreets walkability API for a Brooklyn, NY address. Real responses include additional fields not shown. The composite W and the four v1.0 components are the citable surface; legacy aliases (safety, densityContext, environmentalComfort, networkDesign) are kept for backward compatibility.",
+  "address": "Park Slope, Brooklyn, NY",
+  "lat": 40.6710,
+  "lon": -73.9814,
+  "countryCode": "US",
+  "methodologyVersion": "1.0.0",
+  "sourceSnapshotDates": {
+    "openstreetmap": "2026-06-01",
+    "sentinel2": "2026-spring-composite",
+    "epaNWI": "2024",
+    "censusACS": "2020-2024",
+    "cdcPLACES": "2024",
+    "femaNFHL": "2026-04",
+    "transitland": "2026-05"
+  },
+  "composite": {
+    "score": 87,
+    "scoreDisplay": 8.7,
+    "tier": "Walkable",
+    "realityCapApplied": false,
+    "eliteBonusApplied": true,
+    "eliteBonusPoints": 3
+  },
+  "components": {
+    "dailyReach": {
+      "score": 94,
+      "weight": 0.50,
+      "categorySubscores": {
+        "grocery": 100,
+        "healthcare": 92,
+        "education": 88,
+        "recreation": 100,
+        "dining": 100,
+        "shopping": 96,
+        "civic": 82
+      },
+      "categoriesPresent": 7
+    },
+    "streetSafety": {
+      "score": 78,
+      "weight": 0.20,
+      "subsignals": {
+        "crossingDensity": 82,
+        "speedExposure": 71,
+        "sidewalkCoverage": 96,
+        "trafficCalming": 64,
+        "lightingCoverage": 88,
+        "epaNWIPercentile": 95
+      }
+    },
+    "transitReach": {
+      "score": 89,
+      "weight": 0.15,
+      "subsignals": {
+        "stopDensity": 90,
+        "routeDiversity": 88,
+        "multiModalBonus": true,
+        "routeTypesPresent": ["subway", "bus"]
+      }
+    },
+    "walkingComfort": {
+      "score": 72,
+      "weight": 0.15,
+      "subsignals": {
+        "treeCanopyNDVI": 68,
+        "slope": 95,
+        "airQuality": 70,
+        "heatStressModifier": 1.0
+      }
+    }
+  },
+  "legacyAliases": {
+    "safety": 78,
+    "densityContext": 94,
+    "environmentalComfort": 72,
+    "networkDesign": 78
+  },
+  "personaCards": {
+    "carFree": "Yes",
+    "kidsWalking": "Yes",
+    "agingInPlace": "Borderline"
+  },
+  "neighborhoodIntelligence": {
+    "_comment": "Presented alongside the score for US addresses; not part of W.",
+    "commuteWalkPct": 24,
+    "commuteTransitPct": 48,
+    "cdcObesityVsUS": -8,
+    "cdcDiabetesVsUS": -6,
+    "femaFloodZone": "X"
+  }
+}
