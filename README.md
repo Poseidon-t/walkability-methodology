@@ -16,6 +16,8 @@ This repository is the canonical reference for how a SafeStreets walkability sco
 
 The live tool that implements this methodology is at [safestreets.streetsandcommons.com](https://safestreets.streetsandcommons.com). It is free and requires no sign-up for the core score.
 
+A clean Python reference implementation lives in [**walkability-scorer**](https://github.com/Poseidon-t/walkability-scorer). It implements the four components, the reality cap, the elite bonus, the tier labels, and the PersonaCard verdicts exactly as specified here. Researchers, auditors, and downstream products can install it, run it on sample data, and verify the methodology end-to-end in under a minute.
+
 ## How to cite
 
 If you use this methodology or the datasets in research, journalism, or downstream tooling, please cite:
@@ -68,7 +70,7 @@ Works in 190+ countries. US addresses gain additional layers from EPA, US Census
 ## License
 
 - All documentation and datasets in this repository are licensed under [CC BY 4.0](./LICENSE). Reuse is permitted with attribution to Streets & Commons.
-- Any code samples that ship alongside (none in v1.0) are MIT licensed.
+- Code accompanying the methodology (the [walkability-scorer](https://github.com/Poseidon-t/walkability-scorer) reference implementation) is MIT licensed.
 
 ## Contact
 
