@@ -16,13 +16,13 @@ This repository is the canonical reference for how a SafeStreets walkability sco
 
 The live tool that implements this methodology is at [safestreets.streetsandcommons.com](https://safestreets.streetsandcommons.com). It is free and requires no sign-up for the core score.
 
-A clean Python reference implementation lives in [**walkability-scorer**](https://github.com/Poseidon-t/walkability-scorer). It implements the four components, the reality cap, the elite bonus, the tier labels, and the PersonaCard verdicts exactly as specified here. Researchers, auditors, and downstream products can install it, run it on sample data, and verify the methodology end-to-end in under a minute.
+A clean Python reference implementation lives in [**walkability-scorer**](https://github.com/Poseidon-t/walkability-scorer). It implements the four components, the reality caps, the pedestrian-first gate, the tier labels, and the PersonaCard verdicts exactly as specified here. Researchers, auditors, and downstream products can install it, run it on sample data, and verify the methodology end-to-end in under a minute.
 
 ## How to cite
 
 If you use this methodology or the datasets in research, journalism, or downstream tooling, please cite:
 
-> Streets & Commons (2026). *SafeStreets Walkability Methodology* (v1.0). Zenodo. https://doi.org/10.5281/zenodo.20506270
+> Streets & Commons (2026). *SafeStreets Walkability Methodology* (v1.1). Zenodo. https://doi.org/10.5281/zenodo.20506270
 
 A machine-readable [`CITATION.cff`](./CITATION.cff) is included so GitHub renders a "Cite this repository" button preloaded with the DOI above.
 
@@ -34,7 +34,7 @@ A machine-readable [`CITATION.cff`](./CITATION.cff) is included so GitHub render
 | [COMPONENTS.md](./COMPONENTS.md) | Per-component detail (Daily Reach, Street Safety, Transit Reach, Walking Comfort) |
 | [DATA_SOURCES.md](./DATA_SOURCES.md) | Every input data source, license, coverage, refresh cadence |
 | [CAVEATS.md](./CAVEATS.md) | Known limitations, validity range, what the score does and does not capture |
-| [CHANGELOG.md](./CHANGELOG.md) | Versioned methodology changes (current: v1.0) |
+| [CHANGELOG.md](./CHANGELOG.md) | Versioned methodology changes (current: v1.1) |
 | [examples/brooklyn-sample.json](./examples/brooklyn-sample.json) | Sample API response for a Brooklyn address |
 | [examples/nyc-vs-houston.md](./examples/nyc-vs-houston.md) | Worked comparison of two scores |
 | [data/city-pedestrian-fatalities-2022-2024.csv](./data/city-pedestrian-fatalities-2022-2024.csv) | 50 US cities, pedestrian fatality patterns from NHTSA FARS |
@@ -46,18 +46,19 @@ A composite 0 to 100 score, displayed as 0 to 10:
 
 | Component | Weight | Measures |
 |-----------|--------|----------|
-| Daily Reach | 50% | Walking access to 7 service categories within 15 minutes: grocery, healthcare, education, recreation, dining, shopping, civic |
-| Street Safety | 20% | Crossing density, speed exposure, sidewalk coverage, traffic calming, lighting |
+| Daily Reach | 40% | Walking access to 7 service categories within 15 minutes: grocery, healthcare, education, recreation, dining, shopping, civic |
+| Street Safety | 30% | Crossing density, speed exposure, sidewalk coverage, traffic calming, lighting |
 | Transit Reach | 15% | Transit stop density and route diversity, with a multi-modal bonus |
 | Walking Comfort | 15% | Tree canopy, slope, air quality, heat stress |
 
-Five tier labels at standard cutoffs:
+Six tier labels at these cutoffs:
 
 | Tier | Display (0 to 10) | Internal (0 to 100) |
 |------|-------------------|---------------------|
-| Walkable | ≥ 8.0 | ≥ 80 |
-| Moderate | ≥ 6.5 | ≥ 65 |
-| Car-adjacent | ≥ 5.0 | ≥ 50 |
+| Pedestrian-first | ≥ 9.3 | ≥ 93 |
+| Very walkable | ≥ 8.3 | ≥ 83 |
+| Walkable | ≥ 7.0 | ≥ 70 |
+| Moderate | ≥ 5.5 | ≥ 55 |
 | Car-dependent | ≥ 3.5 | ≥ 35 |
 | Hostile | < 3.5 | < 35 |
 

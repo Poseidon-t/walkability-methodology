@@ -4,7 +4,7 @@ Detailed specification of the four walkability components used in v1.0 of the Sa
 
 ---
 
-## D, Daily Reach (weight: 50%)
+## D, Daily Reach (weight: 40%)
 
 **What it measures:** Walking access to seven essential service categories within a 15-minute walking window from the address.
 
@@ -30,7 +30,7 @@ A coverage signal (number of categories with non-zero count) is exposed alongsid
 
 ---
 
-## S, Street Safety (weight: 20%)
+## S, Street Safety (weight: 30%)
 
 **What it measures:** The built-environment safety of walking trips originating at the address. This is infrastructure safety, not crime.
 

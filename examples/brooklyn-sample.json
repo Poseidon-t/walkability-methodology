@@ -1,10 +1,10 @@
 {
-  "_comment": "Illustrative sample response from the SafeStreets walkability API for a Brooklyn, NY address. Real responses include additional fields not shown. The composite W and the four v1.0 components are the citable surface; legacy aliases (safety, densityContext, environmentalComfort, networkDesign) are kept for backward compatibility.",
+  "_comment": "Illustrative sample response from the SafeStreets walkability API for a Brooklyn, NY address. Real responses include additional fields not shown. The composite W and the four v1.1 components are the citable surface; legacy aliases (safety, densityContext, environmentalComfort, networkDesign) are kept for backward compatibility.",
   "address": "Park Slope, Brooklyn, NY",
-  "lat": 40.6710,
+  "lat": 40.671,
   "lon": -73.9814,
   "countryCode": "US",
-  "methodologyVersion": "1.0.0",
+  "methodologyVersion": "1.1.0",
   "sourceSnapshotDates": {
     "openstreetmap": "2026-06-01",
     "sentinel2": "2026-spring-composite",
@@ -15,17 +15,16 @@
     "transitland": "2026-05"
   },
   "composite": {
-    "score": 87,
-    "scoreDisplay": 8.7,
-    "tier": "Walkable",
+    "score": 85,
+    "scoreDisplay": 8.5,
+    "tier": "Very walkable",
     "realityCapApplied": false,
-    "eliteBonusApplied": true,
-    "eliteBonusPoints": 3
+    "pedestrianFirstGateApplied": false
   },
   "components": {
     "dailyReach": {
       "score": 94,
-      "weight": 0.50,
+      "weight": 0.4,
       "categorySubscores": {
         "grocery": 100,
         "healthcare": 92,
@@ -39,7 +38,7 @@
     },
     "streetSafety": {
       "score": 78,
-      "weight": 0.20,
+      "weight": 0.3,
       "subsignals": {
         "crossingDensity": 82,
         "speedExposure": 71,
@@ -56,7 +55,10 @@
         "stopDensity": 90,
         "routeDiversity": 88,
         "multiModalBonus": true,
-        "routeTypesPresent": ["subway", "bus"]
+        "routeTypesPresent": [
+          "subway",
+          "bus"
+        ]
       }
     },
     "walkingComfort": {

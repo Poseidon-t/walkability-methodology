@@ -1,6 +1,6 @@
 # Worked example: New York vs Houston
 
-A side-by-side computation showing how the same composite formula produces very different walkability scores for two well-known US cities. Both addresses are residential. Both use the v1.0 methodology and identical source snapshot dates.
+A side-by-side computation showing how the same composite formula produces very different walkability scores for two well-known US cities. Both addresses are residential. Both use the v1.1 methodology and identical source snapshot dates.
 
 The point of the worked example is to make the math visible: the composite W is mechanical once the components are computed, and the components are themselves anchored in observable conditions.
 
@@ -16,8 +16,8 @@ The point of the worked example is to make the math visible: the composite W is 
 
 | Component | Weight | NY | Houston |
 |-----------|--------|-----|---------|
-| D, Daily Reach | 0.50 | 94 | 26 |
-| S, Street Safety | 0.20 | 78 | 38 |
+| D, Daily Reach | 0.40 | 94 | 26 |
+| S, Street Safety | 0.30 | 78 | 38 |
 | T, Transit Reach | 0.15 | 89 | 22 |
 | C, Walking Comfort | 0.15 | 72 | 54 |
 
@@ -26,26 +26,26 @@ The point of the worked example is to make the math visible: the composite W is 
 **New York:**
 
 ```
-W = 0.50 × 94 + 0.20 × 78 + 0.15 × 89 + 0.15 × 72
-  = 47.0 + 15.6 + 13.35 + 10.8
-  = 86.75
+W = 0.40 × 94 + 0.30 × 78 + 0.15 × 89 + 0.15 × 72
+  = 37.6 + 23.4 + 13.35 + 10.8
+  = 85.15
 ```
 
-Round to integer: **W = 87** (display: **8.7**, tier: **Walkable**).
+Round to integer: **W = 85** (display: **8.5**, tier: **Very walkable**).
 
-Elite 15-minute city bonus check: D ≥ 90 (yes, 94) and T ≥ 70 (yes, 89). Bonus applies, capped to push W from 84 to 87. The reality cap does not apply (speeds and destination coverage are within thresholds).
+Pedestrian-first gate check: W is 85 and the gate applies only above 90, so it does not bind. Had the composite cleared 90, a Street Safety score of 78 would have held it at 89. No reality cap binds either, since speeds and destination coverage sit within their thresholds.
 
 **Houston:**
 
 ```
-W = 0.50 × 26 + 0.20 × 38 + 0.15 × 22 + 0.15 × 54
-  = 13.0 + 7.6 + 3.3 + 8.1
-  = 32.0
+W = 0.40 × 26 + 0.30 × 38 + 0.15 × 22 + 0.15 × 54
+  = 10.4 + 11.4 + 3.3 + 8.1
+  = 33.2
 ```
 
-Round: **W = 32** (display: **3.2**, tier: **Hostile**).
+Reality cap check: only 1 of 7 destination categories is present within a 15-minute walk, a single park. Two or fewer categories imposes a ceiling of 30, which binds here because the weighted sum of 33.2 sits above it. Speeds on through-streets in the Energy Corridor also exceed 55 km/h, which imposes a ceiling of its own. Neither speed ceiling falls below 30, so the destination ceiling governs.
 
-Reality cap check: speeds on through-streets in the Energy Corridor exceed 55 km/h on the majority of through-streets, and only 1 of 7 destination categories is present within a 15-minute walk (recreation, in the form of a single park). Both conditions would trigger the W ≤ 65 cap, but the unmodified W of 32 is already below the cap, so the cap is non-binding.
+Final: **W = 30** (display: **3.0**, tier: **Hostile**).
 
 ## What the numbers show
 

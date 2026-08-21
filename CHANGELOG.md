@@ -6,6 +6,30 @@ The version of the live SafeStreets tool always matches the latest entry here.
 
 ---
 
+## v1.1.0, 2026-08-21
+
+Brings the specification back in line with the engine that has been live since 2026-08-17. The repository had continued to describe the weights and tiers used before the score recalibration, so scores produced by the live tool did not match scores computed from this document.
+
+**Composite formula:**
+
+```
+W = 0.40 × D + 0.30 × S + 0.15 × T + 0.15 × C
+```
+
+Daily Reach falls from 50% to 40% and Street Safety rises from 20% to 30%. Destination density alone no longer carries a place to the top of the scale.
+
+**Tier labels:** six rather than five. Pedestrian-first is added above Very walkable, Car-adjacent is removed, and the remaining cutoffs move. A score of 8.0 was labelled Walkable under v1.0 and is labelled Walkable under v1.1 only above 7.0, so tier labels are not comparable across versions.
+
+**Reality caps:** section 5.1 previously described a single ceiling of 65. The engine applies a graduated set of ceilings by network speed and destination access, plus a hostile-streets ceiling driven by Street Safety. All are now documented.
+
+**Pedestrian-first gate replaces the elite bonus.** v1.0 raised W by up to 5 points where Daily Reach and Transit Reach were both high. That bonus rewarded destination density on its own. It is replaced by a gate: where W exceeds 90 and Street Safety is below 85, W is set to 89.
+
+**PersonaCards:** renamed to Families, Older Adults and Car-Free Living, each carrying a score and a five-step label rather than a Yes / Borderline / Unlikely verdict.
+
+Scores produced under v1.0 and v1.1 are not directly comparable.
+
+---
+
 ## v1.0.2, 2026-06-02
 
 Wired the Zenodo DOI back into the repository: README badge, citation block, CITATION.cff `identifiers:` entry, and data card citation. DOI is concept-level and resolves to the latest version.
