@@ -77,7 +77,11 @@ Destination access:
 | 2 or fewer of 7 | 30 |
 | 3 of 7 | 45 |
 
-Two further ceilings apply. Where Transit Reach is below 10 and Daily Reach is below 30, W is capped at 35. Where the streets themselves are hostile, W is capped at 40 for a Street Safety score below 25, and at 47 for a score below 40. The hostile-streets ceiling is suspended where destination access is near-complete, where calming data is absent, or where the location is both dense and transit-rich.
+Two further ceilings apply.
+
+Where Transit Reach is below 10 and Daily Reach is below 30, W is capped at 35.
+
+A hostile-streets ceiling applies on Street Safety alone: 40 for a score below 25, and 47 for a score below 40. This ceiling is suspended in three cases, where destination access is near-complete, where traffic calming data is absent, and where the location is both dense and transit-rich.
 
 ### 5.2 Pedestrian-first gate
 
@@ -106,9 +110,13 @@ Three lifestyle verdicts are computed from the same components and presented alo
 
 | Persona | Reads on | Weighting |
 |---------|----------|-----------|
-| Families | Safe streets, parks, school runs | 0.70 Street Safety, 0.30 Daily Reach |
-| Older Adults | Accessible services, flat terrain, safety | 0.40 Walking Comfort, 0.35 Street Safety, 0.25 Daily Reach |
-| Car-Free Living | No vehicle, walking and transit only | Daily Reach and Transit Reach |
+| Families | Safe streets, parks, school runs | 0.35 Street Safety, 0.30 Daily Reach, 0.20 noise, 0.15 Walking Comfort |
+| Older Adults | Accessible services, flat terrain, safety | 0.30 Daily Reach, 0.25 Street Safety, 0.25 terrain, 0.20 Transit Reach |
+| Car-Free Living | No vehicle, walking and transit only | 0.35 Daily Reach, 0.30 Transit Reach, 0.20 Street Safety, 0.15 Walking Comfort |
+
+Noise and terrain are metrics inside Walking Comfort rather than components, so a persona score cannot be rebuilt from the four component scores alone.
+
+Car-Free Living carries a weakest-link cap. Where both destination access and transit are weak, the weighted average overstates viability, so the score is also capped at 1.5 times the weaker of the two.
 
 Labels: Excellent fit at 75 and above, Works well at 60, Some trade-offs at 45, Limited suitability at 30, Not recommended below 30.
 
